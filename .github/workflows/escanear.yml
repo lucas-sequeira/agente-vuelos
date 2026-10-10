@@ -1,0 +1,35 @@
+name: Buscar gangas
+
+on:
+  schedule:
+    - cron: "0 6,18 * * *"   # 08:00 y 20:00 en Valencia (horario de verano; en invierno, 07:00 y 19:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: escanear
+  cancel-in-progress: false
+
+jobs:
+  escanear:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Buscar y avisar
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python escanear.py
+      - name: Guardar datos
+        run: |
+          git config user.name "agente-vuelos"
+          git config user.email "agente-vuelos@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "datos: $(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M')"
+          git pull --rebase -q && git push -q

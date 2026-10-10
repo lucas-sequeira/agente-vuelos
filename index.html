@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vuelos desde Valencia</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--tx:#1d2430;--mut:#6b7280;--line:#e6e2d9;--acc:#0e7c66;--acc2:#e3f3ee;--warn:#b45309;--star:#c58a00;--bad:#b91c1c}
+@media (prefers-color-scheme:dark){:root{--bg:#12161c;--card:#1a2029;--tx:#e8eaed;--mut:#9aa3ae;--line:#2a323d;--acc:#3fbf9f;--acc2:#163a32;--warn:#f59e0b;--star:#f5c542;--bad:#f87171}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{padding:20px 16px 8px;max-width:1100px;margin:auto;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline}
+h1{font-size:22px;margin:0}
+.mut{color:var(--mut);font-size:13px}
+nav{max-width:1100px;margin:auto;padding:0 16px;display:flex;gap:6px;flex-wrap:wrap}
+nav button{border:1px solid var(--line);background:var(--card);color:var(--tx);padding:7px 14px;border-radius:999px;cursor:pointer;font:inherit}
+nav button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+main{max-width:1100px;margin:auto;padding:14px 16px 40px}
+section{display:none}section.on{display:block}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+select,input{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.card.ganga{border-color:var(--acc);box-shadow:inset 3px 0 0 var(--acc)}
+.fila{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.ciudad{font-weight:600;font-size:16px}
+.precio{font-weight:700;font-size:20px;white-space:nowrap}
+.tag{display:inline-block;font-size:11px;padding:2px 7px;border-radius:999px;background:var(--acc2);color:var(--acc);margin-right:4px}
+.tag.fav{color:var(--star);background:transparent;border:1px solid var(--star)}
+.tag.reb{color:var(--warn);background:transparent;border:1px solid var(--warn)}
+a{color:var(--acc)}
+.btn{display:inline-block;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer;text-decoration:none}
+.btn:disabled{opacity:.5}
+table{width:100%;border-collapse:collapse}
+td,th{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);font-size:14px}
+th{color:var(--mut);font-weight:500}
+.form{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;align-items:end}
+label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--mut)}
+.err{color:var(--bad)}
+svg{display:block;width:100%;height:80px}
+h2{font-size:17px;margin:18px 0 8px}
+</style>
+</head>
+<body>
+<header>
+  <h1>✈️ Vuelos desde Valencia</h1>
+  <span class="mut" id="estado">Cargando…</span>
+</header>
+<nav>
+  <button data-s="gangas" class="on">Gangas</button>
+  <button data-s="favoritos">⭐ Favoritos</button>
+  <button data-s="buscar">Buscar</button>
+  <button data-s="ajustes">Ajustes</button>
+</nav>
+<main>
+<section id="gangas" class="on">
+  <div class="filtros">
+    <select id="fZona"><option value="">Todas las zonas</option><option value="cerca">Cerca</option><option value="media">Europa media</option><option value="lejos">Más lejos</option></select>
+    <label style="flex-direction:row;align-items:center;gap:6px;color:var(--tx)"><input type="checkbox" id="fSolo" checked> Solo gangas</label>
+    <input id="fTexto" placeholder="Buscar ciudad…" style="flex:1;min-width:140px">
+  </div>
+  <div class="grid" id="lista"></div>
+  <p class="mut">Precios de Ryanair por persona, ida y vuelta, sin maleta facturada. Se actualiza solo dos veces al día.</p>
+</section>
+
+<section id="favoritos"><div id="favs"></div></section>
+
+<section id="buscar">
+  <div class="card">
+    <div class="form">
+      <label>Destino (código del aeropuerto)<input id="bDest" list="aeropuertos" placeholder="EDI" maxlength="3" style="text-transform:uppercase"></label>
+      <label>Ida<input type="date" id="bIda"></label>
+      <label>Vuelta (vacío = solo ida)<input type="date" id="bVuelta"></label>
+      <label>Personas<input type="number" id="bPers" value="1" min="1" max="6"></label>
+      <label style="flex-direction:row;align-items:center;gap:6px;color:var(--tx)"><input type="checkbox" id="bHotel"> Con hotel</label>
+      <button class="btn" id="bIr">Buscar</button>
+    </div>
+    <p class="mut" id="cuota">Compara todas las aerolíneas en Google Flights. Cada búsqueda gasta 1 de las 250 gratis al mes (2 con hotel).</p>
+  </div>
+  <datalist id="aeropuertos"></datalist>
+  <div id="res"></div>
+</section>
+
+<section id="ajustes">
+  <div class="card">
+    <h2 style="margin-top:0">Qué cuenta como ganga (ida y vuelta)</h2>
+    <div class="form">
+      <label>Cerca (España, Portugal, Francia, Italia) €<input type="number" id="cCerca"></label>
+      <label>Europa media €<input type="number" id="cMedia"></label>
+      <label>Más lejos (Escocia, Canarias, nórdicos, Marruecos…) €<input type="number" id="cLejos"></label>
+      <label>Tope absoluto €<input type="number" id="cTope"></label>
+      <label>También avisar si está un X % por debajo de lo normal<input type="number" id="cDesc"></label>
+      <label>Noches mínimo<input type="number" id="cNmin"></label>
+      <label>Noches máximo<input type="number" id="cNmax"></label>
+    </div>
+    <h2>Favoritos (aviso si baja de…)</h2>
+    <div id="cFavs" class="form"></div>
+    <p><button class="btn" id="cAddFav" style="background:transparent;color:var(--acc);border:1px solid var(--acc)">+ Añadir favorito</button></p>
+    <button class="btn" id="cGuardar">Guardar</button> <span id="cMsg" class="mut"></span>
+    <p class="mut">Los cambios se usan en la siguiente búsqueda automática.</p>
+  </div>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const eur=n=>n==null?'—':(Math.round(n*100)/100).toLocaleString('es-ES',{maximumFractionDigits:2})+' €';
+const MESES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const fc=iso=>{if(!iso)return'';const d=new Date(iso.slice(0,10)+'T12:00');return d.getDate()+' '+MESES[d.getMonth()]};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D={};
+
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.s));
+  location.hash=b.dataset.s;
+  if(b.dataset.s==='buscar')cuota();
+});
+if(location.hash){const b=document.querySelector(`nav button[data-s="${location.hash.slice(1)}"]`);b&&b.click()}
+
+async function cargar(){
+  D=await (await fetch('/data')).json();
+  const g=D.gangas||{};
+  const n=(g.vuelos||[]).filter(v=>v.motivo).length;
+  $('#estado').textContent=g.actualizado?`${n} gangas de ${g.total_destinos} destinos · actualizado ${fc(g.actualizado)} ${g.actualizado.slice(11,16)}`:'Aún no hay datos';
+  pintarLista();pintarFavs();pintarAjustes();
+  $('#aeropuertos').innerHTML=(g.vuelos||[]).map(v=>`<option value="${v.iata}">${esc(v.ciudad)}</option>`).join('');
+}
+function pintarLista(){
+  const z=$('#fZona').value,solo=$('#fSolo').checked,t=$('#fTexto').value.toLowerCase();
+  const vs=(D.gangas?.vuelos||[]).filter(v=>(!z||v.zona===z)&&(!solo||v.motivo)&&(!t||v.ciudad.toLowerCase().includes(t)||v.iata.toLowerCase().includes(t)));
+  $('#lista').innerHTML=vs.map(v=>`<div class="card ${v.motivo?'ganga':''}">
+    <div class="fila"><span class="ciudad">${esc(v.ciudad)} <span class="mut">${v.iata}</span></span><span class="precio">${eur(v.precio)}</span></div>
+    <div class="mut">${fc(v.ida)} → ${fc(v.vuelta)} · ${v.noches} noches${v.normal?` · normal ${eur(v.normal)}`:''}</div>
+    <div style="margin-top:6px">${v.motivo==='favorito'?'<span class="tag fav">⭐ favorito</span>':''}${v.motivo==='rebaja'?'<span class="tag reb">📉 rebaja</span>':''}${v.motivo==='umbral'?'<span class="tag">ganga</span>':''}<a href="${v.enlace}" target="_blank" rel="noopener">Ver en Ryanair</a></div></div>`).join('')||'<p class="mut">Nada con estos filtros.</p>';
+}
+['#fZona','#fSolo','#fTexto'].forEach(s=>$(s).oninput=pintarLista);
+
+function grafica(h){
+  const e=Object.entries(h||{});if(e.length<2)return'<p class="mut">El gráfico de precios aparecerá cuando haya varios días de datos.</p>';
+  const ps=e.map(x=>x[1]),mn=Math.min(...ps),mx=Math.max(...ps),W=600,H=80,p=6;
+  const pts=e.map(([d,v],i)=>[p+i*(W-2*p)/(e.length-1),H-p-(mx===mn?.5:(v-mn)/(mx-mn))*(H-2*p)]);
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><polyline fill="none" stroke="var(--acc)" stroke-width="2" points="${pts.map(q=>q.join(',')).join(' ')}"/></svg><div class="mut fila"><span>${fc(e[0][0])}</span><span>mín ${eur(mn)} · máx ${eur(mx)}</span><span>${fc(e.at(-1)[0])}</span></div>`;
+}
+function pintarFavs(){
+  const ds=D.favoritos?.destinos||{};
+  $('#favs').innerHTML=Object.entries(ds).map(([i,f])=>`<div class="card" style="margin-bottom:12px">
+    <div class="fila"><span class="ciudad">⭐ ${esc(f.ciudad)} <span class="mut">${i}</span></span><span class="mut">aviso por debajo de ${eur(f.limite)}</span></div>
+    <h2>Lo más barato de cada mes (Ryanair, directo)</h2>
+    <table><tr><th>Mes</th><th>Precio</th><th>Fechas</th><th></th></tr>${f.meses.map(m=>{const [a,mm]=m.mes.split('-');return`<tr><td>${MESES[+mm-1]} ${a}</td><td><b>${m.precio?eur(m.precio):'—'}</b></td><td>${m.ida?`${fc(m.ida)} → ${fc(m.vuelta)} (${m.noches} n.)`:'<span class="mut">sin vuelo directo</span>'}</td><td>${m.enlace?`<a href="${m.enlace}" target="_blank" rel="noopener">ver</a>`:''}</td></tr>`}).join('')}</table>
+    <h2>Precio más barato, día a día</h2>${grafica(f.historial)}
+    <p class="mut">Para comparar con otras aerolíneas (con escala), usa la pestaña Buscar con ${i}.</p></div>`).join('')||'<p class="mut">No hay favoritos. Añádelos en Ajustes.</p>';
+}
+function filaFav(i='',v=''){const d=document.createElement('div');d.className='fila';d.innerHTML=`<input placeholder="EDI" maxlength="3" value="${esc(i)}" style="width:70px;text-transform:uppercase"><input type="number" value="${esc(v)}" placeholder="€" style="flex:1"><button class="btn" style="background:transparent;color:var(--bad);padding:4px 8px" title="Quitar">✕</button>`;d.querySelector('button').onclick=()=>d.remove();$('#cFavs').appendChild(d)}
+function pintarAjustes(){
+  const c=D.config;if(!c)return;
+  $('#cCerca').value=c.umbrales.cerca;$('#cMedia').value=c.umbrales.media;$('#cLejos').value=c.umbrales.lejos;
+  $('#cTope').value=c.tope;$('#cDesc').value=c.descuento_pct;$('#cNmin').value=c.noches_min;$('#cNmax').value=c.noches_max;
+  $('#cFavs').innerHTML='';Object.entries(c.favoritos).forEach(([i,v])=>filaFav(i,v));
+}
+$('#cAddFav').onclick=()=>filaFav();
+$('#cGuardar').onclick=async()=>{
+  const fav={};$('#cFavs').querySelectorAll('.fila').forEach(f=>{const [a,b]=f.querySelectorAll('input');if(a.value.trim())fav[a.value.trim().toUpperCase()]=+b.value});
+  const body={umbrales:{cerca:+$('#cCerca').value,media:+$('#cMedia').value,lejos:+$('#cLejos').value},tope:+$('#cTope').value,descuento_pct:+$('#cDesc').value,noches_min:+$('#cNmin').value,noches_max:+$('#cNmax').value,favoritos:fav};
+  $('#cMsg').textContent='Guardando…';
+  const r=await (await fetch('/api/config',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})).json();
+  $('#cMsg').textContent=r.error?'❌ '+r.error:(r.aviso||'✅ Guardado');if(r.config){D.config=r.config;pintarAjustes()}
+};
+
+async function cuota(){try{const r=await (await fetch('/api/cuota')).json();if(r.quedan!=null)$('#cuota').textContent=`Compara todas las aerolíneas en Google Flights. Quedan ${r.quedan} búsquedas gratis este mes (con hotel gasta 2).`}catch(e){}}
+$('#bIr').onclick=async()=>{
+  const dest=$('#bDest').value.trim().toUpperCase();
+  if(!/^[A-Z]{3}$/.test(dest)||!$('#bIda').value){$('#res').innerHTML='<p class="err">Pon el código del aeropuerto (3 letras, p. ej. EDI) y la fecha de ida.</p>';return}
+  const ciudad=(D.gangas?.vuelos||[]).find(v=>v.iata===dest)?.ciudad||dest;
+  $('#bIr').disabled=true;$('#res').innerHTML='<p class="mut">Buscando en Google Flights…</p>';
+  try{
+    const r=await (await fetch('/api/buscar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({destino:dest,ida:$('#bIda').value,vuelta:$('#bVuelta').value,hotel:$('#bHotel').checked,personas:$('#bPers').value,ciudad})})).json();
+    if(r.error){$('#res').innerHTML=`<p class="err">${esc(r.error)}</p>`;return}
+    const nivel={low:'barato',typical:'normal',high:'caro'}[r.nivel]||'';
+    let h=`<h2>Vuelos a ${esc(ciudad)} ${nivel?`<span class="tag">${nivel} para esta ruta</span>`:''}</h2>`;
+    if(r.rango)h+=`<p class="mut">Precio típico: ${eur(r.rango[0])} – ${eur(r.rango[1])} por persona.</p>`;
+    h+=`<table><tr><th>Precio</th><th>Aerolínea</th><th>Salida</th><th>Escalas</th><th>Duración</th></tr>${r.vuelos.map(v=>`<tr><td><b>${eur(v.precio)}</b></td><td>${esc(v.aerolineas.join(', '))}</td><td>${esc((v.salida||'').slice(11))}</td><td>${v.escalas?v.escalas:'directo'}</td><td>${v.duracion?Math.floor(v.duracion/60)+'h '+v.duracion%60+'m':''}</td></tr>`).join('')||'<tr><td colspan=5 class="mut">Sin resultados</td></tr>'}</table>`;
+    if(r.google)h+=`<p><a href="${r.google}" target="_blank" rel="noopener">Abrir en Google Flights para reservar</a></p>`;
+    if(r.hoteles){
+      const pers=+$('#bPers').value||1,mejor=r.vuelos[0]?.precio;
+      h+=`<h2>Hoteles (total de la estancia)</h2><table><tr><th>Hotel</th><th>Total</th><th>Noche</th><th>Nota</th>${mejor?'<th>Vuelo + hotel</th>':''}</tr>${r.hoteles.map(x=>`<tr><td>${x.enlace?`<a href="${x.enlace}" target="_blank" rel="noopener">${esc(x.nombre)}</a>`:esc(x.nombre)}${x.estrellas?` <span class="mut">${'★'.repeat(x.estrellas)}</span>`:''}</td><td>${eur(x.total)}</td><td>${eur(x.noche)}</td><td>${x.nota??''}</td>${mejor?`<td><b>${eur(mejor*pers+x.total)}</b></td>`:''}</tr>`).join('')||'<tr><td colspan=5 class="mut">Sin hoteles</td></tr>'}</table>`;
+      if(mejor)h+=`<p class="mut">Vuelo + hotel = vuelo más barato × ${pers} persona${pers>1?'s':''} + total del hotel.</p>`;
+    }
+    $('#res').innerHTML=h;cuota();
+  }catch(e){$('#res').innerHTML=`<p class="err">${esc(e)}</p>`}finally{$('#bIr').disabled=false}
+};
+cargar();setInterval(cargar,10*60*1000);
+</script>
+</body>
+</html>

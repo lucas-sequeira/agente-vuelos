@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-10T09:36+02:00",
+ "actualizado": "2026-10-10T10:07+02:00",
  "origen": "VLC",
  "total_destinos": 61,
  "vuelos": [
@@ -24,11 +24,11 @@
    "nombre_pais": "España",
    "zona": "cerca",
    "precio": 29.98,
-   "ida": "2026-10-17T05:45",
-   "vuelta": "2026-10-24T07:10",
+   "ida": "2026-10-15T11:15",
+   "vuelta": "2026-10-22T12:50",
    "noches": 7,
    "normal": null,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-10-17&dateIn=2026-10-24&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=IBZ",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-10-15&dateIn=2026-10-22&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=IBZ",
    "motivo": "umbral"
   },
   {
@@ -207,7 +207,7 @@
    "zona": "media",
    "precio": 30.98,
    "ida": "2026-11-15T06:15",
-   "vuelta": "2026-11-21T13:10",
+   "vuelta": "2026-11-21T16:05",
    "noches": 6,
    "normal": null,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-11-15&dateIn=2026-11-21&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=STN",
@@ -382,20 +382,6 @@
    "motivo": "umbral"
   },
   {
-   "iata": "LIS",
-   "ciudad": "Lisboa",
-   "pais": "pt",
-   "nombre_pais": "Portugal",
-   "zona": "cerca",
-   "precio": 39.98,
-   "ida": "2026-11-24T13:40",
-   "vuelta": "2026-11-26T21:15",
-   "noches": 2,
-   "normal": null,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-11-24&dateIn=2026-11-26&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=LIS",
-   "motivo": null
-  },
-  {
    "iata": "NTE",
    "ciudad": "Nantes",
    "pais": "fr",
@@ -407,6 +393,20 @@
    "noches": 7,
    "normal": null,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-10-20&dateIn=2026-10-27&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=NTE",
+   "motivo": null
+  },
+  {
+   "iata": "LIS",
+   "ciudad": "Lisboa",
+   "pais": "pt",
+   "nombre_pais": "Portugal",
+   "zona": "cerca",
+   "precio": 41.98,
+   "ida": "2026-12-10T20:05",
+   "vuelta": "2026-12-12T12:25",
+   "noches": 2,
+   "normal": null,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-10&dateIn=2026-12-12&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=LIS",
    "motivo": null
   },
   {

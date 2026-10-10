@@ -1,0 +1,16 @@
+{
+  "origen": "VLC",
+  "umbrales": {
+    "cerca": 30,
+    "media": 50,
+    "lejos": 80
+  },
+  "tope": 200,
+  "descuento_pct": 40,
+  "favoritos": {
+    "EDI": 80
+  },
+  "noches_min": 2,
+  "noches_max": 7,
+  "meses": 6
+}

@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vuelos desde Valencia</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Vuelos VLC">
+<meta name="theme-color" content="#0e7c66">
 <style>
 :root{--bg:#f6f4ef;--card:#fff;--tx:#1d2430;--mut:#6b7280;--line:#e6e2d9;--acc:#0e7c66;--acc2:#e3f3ee;--warn:#b45309;--star:#c58a00;--bad:#b91c1c}
 @media (prefers-color-scheme:dark){:root{--bg:#12161c;--card:#1a2029;--tx:#e8eaed;--mut:#9aa3ae;--line:#2a323d;--acc:#3fbf9f;--acc2:#163a32;--warn:#f59e0b;--star:#f5c542;--bad:#f87171}}
@@ -108,6 +111,11 @@ const MESES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','
 const fc=iso=>{if(!iso)return'';const d=new Date(iso.slice(0,10)+'T12:00');return d.getDate()+' '+MESES[d.getMonth()]};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let D={};
+// En GitHub Pages (el móvil) no hay servidor: se leen los JSON y se ocultan Buscar y Ajustes.
+const ESTATICO=location.hostname.endsWith('github.io');
+if(ESTATICO){document.querySelectorAll('nav button[data-s="buscar"],nav button[data-s="ajustes"]').forEach(b=>b.remove());
+  const p=document.createElement('p');p.className='mut';p.innerHTML='Versión del móvil. Para buscar destinos y fechas, usa el buscador del Mac.';document.querySelector('main').appendChild(p)}
+async function json(u){const r=await fetch(u+'?t='+Date.now(),{cache:'no-store'});return r.ok?r.json():{}}
 
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
@@ -115,10 +123,10 @@ document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
   location.hash=b.dataset.s;
   if(b.dataset.s==='buscar')cuota();
 });
-if(location.hash){const b=document.querySelector(`nav button[data-s="${location.hash.slice(1)}"]`);b&&b.click()}
+if(location.hash&&!(ESTATICO&&/buscar|ajustes/.test(location.hash))){const b=document.querySelector(`nav button[data-s="${location.hash.slice(1)}"]`);b&&b.click()}
 
 async function cargar(){
-  D=await (await fetch('/data')).json();
+  D=ESTATICO?{gangas:await json('data/gangas.json'),favoritos:await json('data/favoritos.json'),config:await json('config.json')}:await (await fetch('/data')).json();
   const g=D.gangas||{};
   const n=(g.vuelos||[]).filter(v=>v.motivo).length;
   $('#estado').textContent=g.actualizado?`${n} gangas de ${g.total_destinos} destinos · actualizado ${fc(g.actualizado)} ${g.actualizado.slice(11,16)}`:'Aún no hay datos';

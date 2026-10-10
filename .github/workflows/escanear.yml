@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: escanear
@@ -33,3 +34,7 @@ jobs:
           git add data/
           git diff --cached --quiet || git commit -m "datos: $(TZ=Europe/Madrid date '+%Y-%m-%d %H:%M')"
           git pull --rebase -q && git push -q
+      - name: Actualizar la página del móvil
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || true

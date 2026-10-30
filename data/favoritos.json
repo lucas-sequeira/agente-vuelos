@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T12:51+01:00",
+ "actualizado": "2026-10-30T22:47+01:00",
  "destinos": {
   "EDI": {
    "ciudad": "Edimburgo",
@@ -27,7 +27,7 @@
     },
     {
      "mes": "2027-03",
-     "precio": 156.98,
+     "precio": 161.98,
      "ida": "2027-03-30T10:50",
      "vuelta": "2027-04-06T06:15",
      "noches": 7,

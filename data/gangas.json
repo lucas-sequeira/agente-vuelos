@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-19T15:54+01:00",
+ "actualizado": "2026-11-20T01:00+01:00",
  "origen": "VLC",
  "total_destinos": 60,
  "vuelos": [
@@ -11,10 +11,10 @@
    "zona": "cerca",
    "precio": 29.98,
    "ida": "2026-12-11T23:15",
-   "vuelta": "2026-12-17T18:00",
-   "noches": 6,
+   "vuelta": "2026-12-16T09:55",
+   "noches": 5,
    "normal": 29.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-11&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BGY",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-11&dateIn=2026-12-16&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BGY",
    "motivo": "umbral"
   },
   {
@@ -24,11 +24,11 @@
    "nombre_pais": "España",
    "zona": "lejos",
    "precio": 29.98,
-   "ida": "2026-12-10T06:05",
-   "vuelta": "2026-12-17T08:45",
+   "ida": "2026-12-13T06:45",
+   "vuelta": "2026-12-20T09:25",
    "noches": 7,
    "normal": 29.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-10&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=LPA",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-13&dateIn=2026-12-20&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=LPA",
    "motivo": "umbral"
   },
   {
@@ -46,20 +46,6 @@
    "motivo": "umbral"
   },
   {
-   "iata": "PMO",
-   "ciudad": "Palermo",
-   "pais": "it",
-   "nombre_pais": "Italia",
-   "zona": "cerca",
-   "precio": 29.98,
-   "ida": "2026-12-10T18:50",
-   "vuelta": "2026-12-17T21:30",
-   "noches": 7,
-   "normal": 29.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-10&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=PMO",
-   "motivo": "umbral"
-  },
-  {
    "iata": "SVQ",
    "ciudad": "Sevilla",
    "pais": "es",
@@ -67,10 +53,10 @@
    "zona": "cerca",
    "precio": 29.98,
    "ida": "2026-12-14T22:15",
-   "vuelta": "2026-12-20T06:30",
-   "noches": 6,
+   "vuelta": "2026-12-17T06:40",
+   "noches": 3,
    "normal": 29.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-14&dateIn=2026-12-20&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=SVQ",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-14&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=SVQ",
    "motivo": "umbral"
   },
   {
@@ -94,11 +80,11 @@
    "nombre_pais": "Italia",
    "zona": "cerca",
    "precio": 29.98,
-   "ida": "2026-12-10T06:05",
+   "ida": "2026-12-15T17:30",
    "vuelta": "2026-12-17T21:15",
-   "noches": 7,
+   "noches": 2,
    "normal": 30.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-10&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=TSF",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-15&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=TSF",
    "motivo": "umbral"
   },
   {
@@ -144,20 +130,6 @@
    "motivo": null
   },
   {
-   "iata": "RAK",
-   "ciudad": "Marrakech",
-   "pais": "ma",
-   "nombre_pais": "Marruecos",
-   "zona": "lejos",
-   "precio": 30.98,
-   "ida": "2027-02-13T22:20",
-   "vuelta": "2027-02-19T15:15",
-   "noches": 6,
-   "normal": 30.19,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-13&dateIn=2027-02-19&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=RAK",
-   "motivo": "umbral"
-  },
-  {
    "iata": "TRS",
    "ciudad": "Trieste",
    "pais": "it",
@@ -186,20 +158,6 @@
    "motivo": null
   },
   {
-   "iata": "FEZ",
-   "ciudad": "Fes",
-   "pais": "ma",
-   "nombre_pais": "Marruecos",
-   "zona": "lejos",
-   "precio": 31.98,
-   "ida": "2027-01-18T23:30",
-   "vuelta": "2027-01-23T13:05",
-   "noches": 5,
-   "normal": 29.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-18&dateIn=2027-01-23&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FEZ",
-   "motivo": "umbral"
-  },
-  {
    "iata": "PSR",
    "ciudad": "Pescara",
    "pais": "it",
@@ -214,6 +172,62 @@
    "motivo": null
   },
   {
+   "iata": "PMO",
+   "ciudad": "Palermo",
+   "pais": "it",
+   "nombre_pais": "Italia",
+   "zona": "cerca",
+   "precio": 32.06,
+   "ida": "2026-12-10T18:50",
+   "vuelta": "2026-12-12T16:45",
+   "noches": 2,
+   "normal": 29.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-10&dateIn=2026-12-12&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=PMO",
+   "motivo": null
+  },
+  {
+   "iata": "RAK",
+   "ciudad": "Marrakech",
+   "pais": "ma",
+   "nombre_pais": "Marruecos",
+   "zona": "lejos",
+   "precio": 32.98,
+   "ida": "2027-02-13T22:20",
+   "vuelta": "2027-02-19T15:15",
+   "noches": 6,
+   "normal": 30.62,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-13&dateIn=2027-02-19&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=RAK",
+   "motivo": "umbral"
+  },
+  {
+   "iata": "FEZ",
+   "ciudad": "Fes",
+   "pais": "ma",
+   "nombre_pais": "Marruecos",
+   "zona": "lejos",
+   "precio": 33.65,
+   "ida": "2027-01-18T23:30",
+   "vuelta": "2027-01-23T13:05",
+   "noches": 5,
+   "normal": 29.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-18&dateIn=2027-01-23&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FEZ",
+   "motivo": "umbral"
+  },
+  {
+   "iata": "BHX",
+   "ciudad": "Birmingham",
+   "pais": "gb",
+   "nombre_pais": "Reino Unido",
+   "zona": "media",
+   "precio": 33.98,
+   "ida": "2026-12-10T14:10",
+   "vuelta": "2026-12-17T16:05",
+   "noches": 7,
+   "normal": 38.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-10&dateIn=2026-12-17&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BHX",
+   "motivo": "umbral"
+  },
+  {
    "iata": "TLS",
    "ciudad": "Toulouse",
    "pais": "fr",
@@ -223,22 +237,8 @@
    "ida": "2027-01-10T10:35",
    "vuelta": "2027-01-15T08:00",
    "noches": 5,
-   "normal": 30.69,
+   "normal": 30.79,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-10&dateIn=2027-01-15&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=TLS",
-   "motivo": null
-  },
-  {
-   "iata": "OPO",
-   "ciudad": "Oporto",
-   "pais": "pt",
-   "nombre_pais": "Portugal",
-   "zona": "cerca",
-   "precio": 34.54,
-   "ida": "2027-01-13T19:40",
-   "vuelta": "2027-01-16T13:25",
-   "noches": 3,
-   "normal": 33.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-13&dateIn=2027-01-16&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=OPO",
    "motivo": null
   },
   {
@@ -251,7 +251,7 @@
    "ida": "2027-01-17T23:20",
    "vuelta": "2027-01-22T05:45",
    "noches": 5,
-   "normal": 31.36,
+   "normal": 32.61,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-17&dateIn=2027-01-22&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=TNG",
    "motivo": "umbral"
   },
@@ -265,8 +265,22 @@
    "ida": "2027-01-12T17:55",
    "vuelta": "2027-01-15T22:40",
    "noches": 3,
-   "normal": 37.98,
+   "normal": 37.48,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-12&dateIn=2027-01-15&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FCO",
+   "motivo": null
+  },
+  {
+   "iata": "OPO",
+   "ciudad": "Oporto",
+   "pais": "pt",
+   "nombre_pais": "Portugal",
+   "zona": "cerca",
+   "precio": 35.72,
+   "ida": "2027-01-09T16:30",
+   "vuelta": "2027-01-16T13:25",
+   "noches": 7,
+   "normal": 33.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-09&dateIn=2027-01-16&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=OPO",
    "motivo": null
   },
   {
@@ -284,18 +298,18 @@
    "motivo": null
   },
   {
-   "iata": "BHX",
-   "ciudad": "Birmingham",
-   "pais": "gb",
-   "nombre_pais": "Reino Unido",
-   "zona": "media",
-   "precio": 40.98,
-   "ida": "2026-12-03T14:10",
-   "vuelta": "2026-12-06T20:00",
-   "noches": 3,
-   "normal": 38.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-03&dateIn=2026-12-06&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BHX",
-   "motivo": "umbral"
+   "iata": "MRS",
+   "ciudad": "Marsella",
+   "pais": "fr",
+   "nombre_pais": "Francia",
+   "zona": "cerca",
+   "precio": 39.98,
+   "ida": "2027-01-15T11:50",
+   "vuelta": "2027-01-22T09:50",
+   "noches": 7,
+   "normal": 39.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-15&dateIn=2027-01-22&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=MRS",
+   "motivo": null
   },
   {
    "iata": "PSA",
@@ -321,22 +335,22 @@
    "ida": "2027-03-04T21:50",
    "vuelta": "2027-03-07T21:05",
    "noches": 3,
-   "normal": 30.98,
+   "normal": 33.98,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-03-04&dateIn=2027-03-07&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=MAN",
    "motivo": "umbral"
   },
   {
-   "iata": "MRS",
-   "ciudad": "Marsella",
-   "pais": "fr",
-   "nombre_pais": "Francia",
+   "iata": "NAP",
+   "ciudad": "Nápoles",
+   "pais": "it",
+   "nombre_pais": "Italia",
    "zona": "cerca",
    "precio": 41.98,
-   "ida": "2027-02-05T11:50",
-   "vuelta": "2027-02-07T11:45",
-   "noches": 2,
-   "normal": 39.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-05&dateIn=2027-02-07&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=MRS",
+   "ida": "2027-01-29T13:50",
+   "vuelta": "2027-02-03T17:45",
+   "noches": 5,
+   "normal": 41.01,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-29&dateIn=2027-02-03&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=NAP",
    "motivo": null
   },
   {
@@ -349,23 +363,9 @@
    "ida": "2027-01-28T13:40",
    "vuelta": "2027-02-01T22:10",
    "noches": 4,
-   "normal": 49.98,
+   "normal": 49.48,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-28&dateIn=2027-02-01&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=NUE",
    "motivo": "umbral"
-  },
-  {
-   "iata": "NAP",
-   "ciudad": "Nápoles",
-   "pais": "it",
-   "nombre_pais": "Italia",
-   "zona": "cerca",
-   "precio": 42.8,
-   "ida": "2026-12-12T20:20",
-   "vuelta": "2026-12-16T17:45",
-   "noches": 4,
-   "normal": 41.14,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-12&dateIn=2026-12-16&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=NAP",
-   "motivo": null
   },
   {
    "iata": "ACE",
@@ -391,22 +391,8 @@
    "ida": "2026-11-29T06:15",
    "vuelta": "2026-12-06T08:10",
    "noches": 7,
-   "normal": 37.98,
+   "normal": 39.98,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-11-29&dateIn=2026-12-06&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=STN",
-   "motivo": "umbral"
-  },
-  {
-   "iata": "POZ",
-   "ciudad": "Poznań",
-   "pais": "pl",
-   "nombre_pais": "Polonia",
-   "zona": "media",
-   "precio": 43.67,
-   "ida": "2026-12-12T20:40",
-   "vuelta": "2026-12-14T14:25",
-   "noches": 2,
-   "normal": 41.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-12&dateIn=2026-12-14&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=POZ",
    "motivo": "umbral"
   },
   {
@@ -424,31 +410,45 @@
    "motivo": null
   },
   {
-   "iata": "FKB",
-   "ciudad": "Karlsruhe",
-   "pais": "de",
-   "nombre_pais": "Alemania",
-   "zona": "media",
-   "precio": 43.98,
-   "ida": "2027-01-23T19:25",
-   "vuelta": "2027-01-30T22:05",
-   "noches": 7,
-   "normal": 47.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-23&dateIn=2027-01-30&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FKB",
-   "motivo": "umbral"
-  },
-  {
    "iata": "FMM",
    "ciudad": "Memmingen",
    "pais": "de",
    "nombre_pais": "Alemania",
    "zona": "media",
-   "precio": 46.98,
+   "precio": 43.98,
    "ida": "2027-01-16T12:10",
-   "vuelta": "2027-01-18T16:10",
-   "noches": 2,
+   "vuelta": "2027-01-23T09:20",
+   "noches": 7,
    "normal": 46.37,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-16&dateIn=2027-01-18&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FMM",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-16&dateIn=2027-01-23&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FMM",
+   "motivo": "umbral"
+  },
+  {
+   "iata": "POZ",
+   "ciudad": "Poznań",
+   "pais": "pl",
+   "nombre_pais": "Polonia",
+   "zona": "media",
+   "precio": 44.67,
+   "ida": "2026-12-12T20:40",
+   "vuelta": "2026-12-14T14:25",
+   "noches": 2,
+   "normal": 41.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-12&dateIn=2026-12-14&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=POZ",
+   "motivo": "umbral"
+  },
+  {
+   "iata": "FKB",
+   "ciudad": "Karlsruhe",
+   "pais": "de",
+   "nombre_pais": "Alemania",
+   "zona": "media",
+   "precio": 44.98,
+   "ida": "2027-01-23T19:25",
+   "vuelta": "2027-01-30T22:05",
+   "noches": 7,
+   "normal": 47.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-23&dateIn=2027-01-30&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=FKB",
    "motivo": "umbral"
   },
   {
@@ -475,7 +475,7 @@
    "ida": "2027-02-20T07:50",
    "vuelta": "2027-02-22T12:40",
    "noches": 2,
-   "normal": 51.45,
+   "normal": 51.16,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-20&dateIn=2027-02-22&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=NRN",
    "motivo": null
   },
@@ -489,7 +489,7 @@
    "ida": "2027-02-13T21:40",
    "vuelta": "2027-02-20T18:05",
    "noches": 7,
-   "normal": 48.94,
+   "normal": 49.69,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-13&dateIn=2027-02-20&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=WRO",
    "motivo": null
   },
@@ -503,7 +503,7 @@
    "ida": "2027-01-15T17:50",
    "vuelta": "2027-01-22T22:20",
    "noches": 7,
-   "normal": 55.77,
+   "normal": 55.47,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-15&dateIn=2027-01-22&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=SOF",
    "motivo": "umbral"
   },
@@ -527,7 +527,7 @@
    "pais": "be",
    "nombre_pais": "Bélgica",
    "zona": "media",
-   "precio": 54.17,
+   "precio": 54.58,
    "ida": "2027-01-16T19:45",
    "vuelta": "2027-01-23T17:00",
    "noches": 7,
@@ -555,11 +555,11 @@
    "pais": "it",
    "nombre_pais": "Italia",
    "zona": "cerca",
-   "precio": 55.13,
+   "precio": 56.13,
    "ida": "2026-12-12T13:45",
    "vuelta": "2026-12-14T05:45",
    "noches": 2,
-   "normal": 50.95,
+   "normal": 51.5,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2026-12-12&dateIn=2026-12-14&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BLQ",
    "motivo": null
   },
@@ -569,12 +569,12 @@
    "pais": "hu",
    "nombre_pais": "Hungría",
    "zona": "media",
-   "precio": 56.98,
-   "ida": "2027-01-16T17:40",
-   "vuelta": "2027-01-23T14:15",
-   "noches": 7,
+   "precio": 59.98,
+   "ida": "2027-01-10T19:10",
+   "vuelta": "2027-01-16T14:15",
+   "noches": 6,
    "normal": 56.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-16&dateIn=2027-01-23&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BUD",
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-10&dateIn=2027-01-16&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BUD",
    "motivo": null
   },
   {
@@ -601,7 +601,7 @@
    "ida": "2027-01-23T07:50",
    "vuelta": "2027-01-28T21:10",
    "noches": 5,
-   "normal": 59.48,
+   "normal": 58.48,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-01-23&dateIn=2027-01-28&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=EIN",
    "motivo": null
   },
@@ -611,7 +611,7 @@
    "pais": "it",
    "nombre_pais": "Italia",
    "zona": "cerca",
-   "precio": 64.61,
+   "precio": 63.61,
    "ida": "2027-01-18T17:30",
    "vuelta": "2027-01-25T20:20",
    "noches": 7,
@@ -625,12 +625,12 @@
    "pais": "at",
    "nombre_pais": "Austria",
    "zona": "media",
-   "precio": 64.98,
-   "ida": "2027-02-12T09:10",
-   "vuelta": "2027-02-14T06:20",
-   "noches": 2,
-   "normal": 60.98,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-12&dateIn=2027-02-14&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=VIE",
+   "precio": 65.38,
+   "ida": "2027-02-14T09:40",
+   "vuelta": "2027-02-21T06:20",
+   "noches": 7,
+   "normal": 61.48,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-14&dateIn=2027-02-21&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=VIE",
    "motivo": null
   },
   {
@@ -643,7 +643,7 @@
    "ida": "2027-04-09T17:20",
    "vuelta": "2027-04-13T06:10",
    "noches": 4,
-   "normal": 89.48,
+   "normal": 85.98,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-04-09&dateIn=2027-04-13&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=WMI",
    "motivo": null
   },
@@ -718,6 +718,20 @@
    "motivo": null
   },
   {
+   "iata": "BER",
+   "ciudad": "Berlín",
+   "pais": "de",
+   "nombre_pais": "Alemania",
+   "zona": "media",
+   "precio": 87.52,
+   "ida": "2027-02-15T06:15",
+   "vuelta": "2027-02-21T10:15",
+   "noches": 6,
+   "normal": 79.98,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-15&dateIn=2027-02-21&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BER",
+   "motivo": null
+  },
+  {
    "iata": "DUB",
    "ciudad": "Dublín",
    "pais": "ie",
@@ -746,20 +760,6 @@
    "motivo": null
   },
   {
-   "iata": "BER",
-   "ciudad": "Berlín",
-   "pais": "de",
-   "nombre_pais": "Alemania",
-   "zona": "media",
-   "precio": 88.52,
-   "ida": "2027-02-15T06:15",
-   "vuelta": "2027-02-21T10:15",
-   "noches": 6,
-   "normal": 79.48,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-02-15&dateIn=2027-02-21&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=BER",
-   "motivo": null
-  },
-  {
    "iata": "RBA",
    "ciudad": "Rabat",
    "pais": "ma",
@@ -783,7 +783,7 @@
    "ida": "2027-04-08T20:15",
    "vuelta": "2027-04-15T22:20",
    "noches": 7,
-   "normal": 103.98,
+   "normal": 103.48,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-04-08&dateIn=2027-04-15&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=CAG",
    "motivo": null
   },
@@ -802,20 +802,6 @@
    "motivo": null
   },
   {
-   "iata": "EDI",
-   "ciudad": "Edimburgo",
-   "pais": "gb",
-   "nombre_pais": "Reino Unido",
-   "zona": "lejos",
-   "precio": 102.98,
-   "ida": "2027-05-06T06:25",
-   "vuelta": "2027-05-11T06:15",
-   "noches": 5,
-   "normal": 112.48,
-   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-05-06&dateIn=2027-05-11&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=EDI",
-   "motivo": null
-  },
-  {
    "iata": "FNC",
    "ciudad": "Funchal",
    "pais": "pt",
@@ -830,6 +816,20 @@
    "motivo": null
   },
   {
+   "iata": "EDI",
+   "ciudad": "Edimburgo",
+   "pais": "gb",
+   "nombre_pais": "Reino Unido",
+   "zona": "lejos",
+   "precio": 104.98,
+   "ida": "2027-05-06T06:25",
+   "vuelta": "2027-05-11T06:15",
+   "noches": 5,
+   "normal": 112.48,
+   "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-05-06&dateIn=2027-05-11&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=EDI",
+   "motivo": null
+  },
+  {
    "iata": "ORK",
    "ciudad": "Cork",
    "pais": "ie",
@@ -839,7 +839,7 @@
    "ida": "2027-04-07T18:20",
    "vuelta": "2027-04-10T20:15",
    "noches": 3,
-   "normal": 124.48,
+   "normal": 123.98,
    "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-04-07&dateIn=2027-04-10&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=ORK",
    "motivo": null
   }

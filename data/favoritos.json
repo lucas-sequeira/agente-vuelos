@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T17:27+01:00",
+ "actualizado": "2026-11-26T02:18+01:00",
  "destinos": {
   "EDI": {
    "ciudad": "Edimburgo",
@@ -31,11 +31,11 @@
     },
     {
      "mes": "2027-04",
-     "precio": 122.98,
-     "ida": "2027-04-22T06:25",
-     "vuelta": "2027-04-24T17:40",
-     "noches": 2,
-     "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-04-22&dateIn=2027-04-24&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=EDI"
+     "precio": 116.98,
+     "ida": "2027-04-08T06:25",
+     "vuelta": "2027-04-15T08:50",
+     "noches": 7,
+     "enlace": "https://www.ryanair.com/es/es/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2027-04-08&dateIn=2027-04-15&isConnectedFlight=false&discount=0&isReturn=true&promoCode=&originIata=VLC&destinationIata=EDI"
     }
    ],
    "historial": {
@@ -85,7 +85,8 @@
     "2026-11-22": 104.98,
     "2026-11-23": 105.98,
     "2026-11-24": 104.98,
-    "2026-11-25": 104.98
+    "2026-11-25": 104.98,
+    "2026-11-26": 105.98
    }
   }
  }
